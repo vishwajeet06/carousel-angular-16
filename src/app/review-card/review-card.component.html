@@ -1,0 +1,21 @@
+<div *ngIf="reviews.length > 0" class="carousel">
+  <div
+    *ngFor="let review of reviews"
+    class="card-container"
+    id="card-container"
+  >
+    <div class="card">
+      <img
+        src="{{ review.image }}"
+        alt="{{ review.name }}"
+        class="card-image"
+      />
+      <div class="card-body">
+        <h2 class="card-title">{{ review.name }}</h2>
+        <p class="card-description">
+          {{ review.review }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
